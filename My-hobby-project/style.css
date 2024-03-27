@@ -95,3 +95,39 @@ button:focus-visible {
   }
 }
 */
+body {
+  display: flex;
+  justify-content: center;
+  background-color: rgb(185, 159, 196);
+}
+
+h1 {
+  font-family: 'Bitter', sans-serif;
+  font-weight: 300;
+  font-size: 1.2em;
+  color: white;
+  height: 200px;
+  width: 200px;
+  clip-path: circle(50% at 50% 50%);
+  text-align: center;
+  line-height: 200px;
+}
+.rainbow-effect {
+  transition: background-color 3s;
+  cursor: pointer;
+  max-width: 500px;
+
+  &:hover {
+    animation: rainbow-animation 3s infinite;
+  }
+}
+
+@keyframes rainbow-animation {
+  0% { background-color: rgb(200, 151, 187); }
+  16.67% { background-color: rgb(190, 160, 206); }
+  33.33% { background-color: rgb(143, 130, 179); }
+  50% { background-color: rgb(203, 162, 203); }
+  66.67% { background-color: rgb(164, 164, 216); }
+  83.33% { background-color: rgb(163, 129, 188); }
+  100% { background-color: rgb(196, 144, 196); }
+}
